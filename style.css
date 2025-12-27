@@ -342,101 +342,52 @@ footer {
 
 }
 
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
 
-/*Responsiveness*/
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 5px;
+}
+
 @media (max-width: 768px) {
- 
-  .container {
-    padding: 0 20px !important;
-  }
-
+  .container { padding: 0 15px !important; }
 
   nav {
-    display: flex;
-    flex-direction: column;
-    padding: 0.5rem !important;
-    min-height: auto;
+    flex-wrap: wrap;
+    padding: 10px 20px !important;
   }
 
-  nav .logo {
+  .hamburger {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px; 
-    margin-bottom: 5px;
-  }
-  
-  nav .logo img {
-    height: 35px !important; 
-  }
-
-  nav .logo b {
-    font-size: 1.2rem;
   }
 
   nav ul {
-    display: flex;
+    display: none;
     flex-direction: column;
-    align-items: center;
-    margin-top: 5px;
-    gap: 5px !important; 
     width: 100%;
-    padding: 0;
-  }
-  
-  nav a {
-    display: block;
-    padding: 5px 15px; 
-    font-size: 0.9rem;
-    background: rgba(255, 255, 255, 0.15); 
-    border-radius: 5px;
-    width: 80%; 
-    text-align: center; 
-  }
-  
-  .hero {
-    height: auto !important; 
-    min-height: 50vh; 
-    padding: 80px 20px; 
-  }
-  
-  .hero h1 {
-    font-size: 2rem !important; 
-    line-height: 1.2;
-    margin-bottom: 15px;
-  }
-  
-  .hero p {
-    font-size: 1rem !important;
+    text-align: center;
+    margin-top: 15px;
+    background-color: #00bcd4;
+    border-top: 1px solid rgba(255,255,255,0.2);
   }
 
-  .page-section h2 {
-    font-size: 1.8rem !important; 
-    margin-bottom: 1rem;
-  }
-  .section-subtitle {
-    margin-bottom: 2rem;
-  }
-
-  .type-flex, 
-  .dest-grid, 
-  .tips-section {
+  nav ul.active {
     display: flex;
-    flex-direction: column; 
-    align-items: center; 
   }
 
-  .type-card, 
-  .destination-card, 
-  .tip-card {
-    width: 100% !important; 
-    max-width: 350px !important; 
-    margin-bottom: 25px;
+  nav ul li {
+    margin: 10px 0;
   }
 
-  .gallery-grid {
-    column-count: 1 !important;
-  }
+  .hero { height: auto; padding: 60px 20px; }
+  .hero h1 { font-size: 2rem !important; }
+  .type-card, .destination-card, .tip-card { width: 100% !important; max-width: 100%; }
+  .gallery-grid { column-count: 1 !important; }
 }
-
-
