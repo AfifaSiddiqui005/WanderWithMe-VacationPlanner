@@ -357,18 +357,38 @@ footer {
 }
 
 @media (max-width: 768px) {
-  .container { padding: 0 15px !important; }
+  .container {
+    padding: 0 15px !important;
+  }
 
   nav {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px !important;
   }
 
+  nav .logo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: auto !important;
+    margin: 0;
+  }
+
+  nav .logo img {
+    height: 35px !important;
+  }
+
+  nav .logo b {
+    font-size: 1.2rem;
+  }
+
   .hamburger {
     display: flex;
+    margin-left: auto;
   }
 
   nav ul {
@@ -378,7 +398,8 @@ footer {
     text-align: center;
     margin-top: 15px;
     background-color: #00bcd4;
-    border-top: 1px solid rgba(255,255,255,0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 0;
   }
 
   nav ul.active {
@@ -389,8 +410,24 @@ footer {
     margin: 10px 0;
   }
 
-  .hero { height: auto; padding: 60px 20px; }
-  .hero h1 { font-size: 2rem !important; }
-  .type-card, .destination-card, .tip-card { width: 100% !important; max-width: 100%; }
-  .gallery-grid { column-count: 1 !important; }
+  .hero {
+    height: auto;
+    padding: 60px 20px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem !important;
+  }
+
+  .type-card,
+  .destination-card,
+  .tip-card {
+    width: 100% !important;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .gallery-grid {
+    column-count: 1 !important;
+  }
 }
