@@ -1,0 +1,342 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #87abf7 40%, #71e3f2 60%);
+  background-attachment: fixed;
+  color: #333;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/*REUSABLE COMPONENTS & TYPOGRAPHY */
+
+.page-section {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.page-section.alt-bg {
+  background-color: transparent;
+}
+
+/* Section Headings*/
+.page-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #003b5c; 
+  text-shadow: none;
+  display: inline-block;
+}
+
+/* Subtitles */
+.section-subtitle {
+  font-size: 1.1rem;
+  color: #444;
+  font-weight: 500;
+  margin-top: -1rem;
+  margin-bottom: 3rem;
+}
+
+/* Main Call-to-Action Buttons */
+.btn {
+  background-color: #007a91;
+  color: #ffffff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: inline-block;
+  border: none;
+}
+
+.btn:hover {
+  background-color: #005f6b;
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 122, 145, 0.4);
+}
+
+/*NAVIGATION BAR*/
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #00bcd4;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky; 
+  top: 0;
+  z-index: 1000;
+}
+
+nav .logo {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+nav ul a:hover {
+  color: #005f6b;
+  opacity: 0.9;
+}
+
+/* HERO SECTION (HEADER) */
+.hero {
+  position: relative;
+  background-image: url("images/banner1.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.3)
+  );
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  animation: slideUp 1s ease-out; 
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+/* Entry Animation Keyframes */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*GLASSMORPHISM CARDS */
+.type-card, 
+.destination-card, 
+.tip-card, 
+.gallery-card {
+  /* Glass Effect Background */
+  background: rgba(255, 255, 255, 0.25);
+  
+  /* Blur Effect */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  
+  /* Border and Shadow */
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+  
+  /* Layout & Transition */
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+/* Hover Effects for Cards*/
+.type-card:hover, 
+.destination-card:hover, 
+.tip-card:hover, 
+.gallery-card:hover {
+  background: rgba(255, 255, 255, 0.4);
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.25);
+  border: 1px solid white;
+}
+
+/* Card Typography*/
+.type-card h3, 
+.destination-card h3, 
+.tip-card h3, 
+.gallery-card h3 {
+  color: #01035b; 
+  margin: 15px 0 5px;
+  font-size: 1.2rem;
+  text-shadow: none;
+}
+
+.type-card p, 
+.destination-card p, 
+.tip-card p, 
+.gallery-card p {
+  color: #000000; 
+  font-size: 0.95rem;
+  padding: 0 1rem 1.5rem;
+  margin: 0;
+}
+
+/* Card Images */
+.type-card img,
+.destination-card img,
+.gallery-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+/*SECTION SPECIFIC LAYOUTS*/
+
+/* Vacation Types Flexbox */
+.type-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.type-card { width: 300px; }
+
+/* Destinations Grid */
+.dest-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+/* Travel Tips Flexbox */
+.tips-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.tip-card { width: 300px; padding: 20px; }
+.tip-emoji { font-size: 3em; }
+
+/* Gallery Columns */
+.gallery-grid {
+  column-count: 3; /* Masonry Layout */
+  column-gap: 1.5rem;
+}
+.gallery-card {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+/*PARALLAX STRIP*/
+.parallax-strip {
+  height: 300px;
+  background-image: url("images/parallax.jpg"); 
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.parallax-strip .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.parallax-strip h2 {
+  color: white;
+  font-size: 2rem;
+  z-index: 2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  font-family: 'Cursive', sans-serif;
+}
+
+/*ABOUT & FOOTER */
+.about-container {
+  text-align: center;
+}
+
+.about-text {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.about-text2 {
+  font-size: 1.2rem;
+  margin-top: 30px;
+  color: #383434;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.mission {
+  background-color: #00bcd4;
+  padding: 3rem 0;
+  text-align: center;
+  color: white;
+  margin-top: 3rem;
+}
+
+.mission h3 {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+footer {
+  background-color: #007a91;
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.hidden {
+  display: none;
+}
