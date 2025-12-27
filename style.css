@@ -191,7 +191,7 @@ nav ul a:hover {
 .gallery-card:hover {
   background: rgba(255, 255, 255, 0.4);
   transform: translateY(-5px) scale(1.02);
-  box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.25);
+  box-shadow: 0 15px 0px 0 rgba(72, 4, 156, 0.25);
   border: 1px solid white;
 }
 
@@ -431,3 +431,4 @@ footer {
     column-count: 1 !important;
   }
 }
+
