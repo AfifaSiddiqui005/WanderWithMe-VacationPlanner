@@ -343,43 +343,77 @@ footer {
 }
 
 
+/*Responsiveness*/
 @media (max-width: 768px) {
+  
+  .container {
+    padding: 0 20px !important;
+  }
 
   nav {
-    flex-direction: column;
-    padding: 1rem;
+    flex-direction: column; 
+    padding: 1rem !important;
+    height: auto !important; 
   }
   
-  nav ul {
-    margin-top: 15px;
-    gap: 10px;
-    flex-wrap: wrap;
-    justify-content: center;
+  nav .logo img {
+    height: 50px !important; 
   }
 
+  nav ul {
+    margin-top: 15px;
+    flex-direction: column; 
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+  }
+  
+  nav a {
+    display: block;
+    padding: 5px;
+  }
+  
+  .hero {
+    height: auto !important; 
+    min-height: 50vh; 
+    padding: 80px 20px; 
+  }
+  
   .hero h1 {
-    font-size: 2rem; 
+    font-size: 2rem !important; 
+    line-height: 1.2;
+    margin-bottom: 15px;
   }
   
   .hero p {
-    font-size: 1rem;
-    padding: 0 20px;
+    font-size: 1rem !important;
   }
 
-  .page-section {
-    padding: 2rem 0; 
+  .page-section h2 {
+    font-size: 1.8rem !important; 
+    margin-bottom: 1rem;
+  }
+  .section-subtitle {
+    margin-bottom: 2rem;
+  }
+
+  .type-flex, 
+  .dest-grid, 
+  .tips-section {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+  }
+
+  .type-card, 
+  .destination-card, 
+  .tip-card {
+    width: 100% !important; 
+    max-width: 350px !important; 
+    margin-bottom: 25px;
   }
 
   .gallery-grid {
-    column-count: 1; 
-  }
-
-  .parallax-strip {
-    height: 200px;
-  }
-  
-  .parallax-strip h2 {
-    font-size: 1.5rem;
-    padding: 0 20px;
+    column-count: 1 !important;
   }
 }
