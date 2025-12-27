@@ -355,9 +355,17 @@ footer {
     padding: 1rem !important;
     height: auto !important; 
   }
+  nav .logo {
+    display: flex;            
+    align-items: center;      
+    gap: 10px;                 
+    font-size: 1.4rem;         
+    margin-bottom: 10px;       
+  }
   
   nav .logo img {
-    height: 50px !important; 
+    height: 40px !important; 
+    width: auto;
   }
 
   nav ul {
@@ -417,3 +425,4 @@ footer {
     column-count: 1 !important;
   }
 }
+
